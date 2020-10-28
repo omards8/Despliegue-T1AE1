@@ -1,3 +1,6 @@
-apt-get update
+apt-get -y update
 apt-get -y install nginx
-service nginx start
+cp -R /usr/share/nginx/www /vagrant/www
+rm -rf /usr/share/nginx/www
+ln -s /vagrant/www /usr/share/nginx/www
+
